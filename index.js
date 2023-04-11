@@ -56,3 +56,6 @@ const myThirdAtropos = Atropos({
     // durationEnter: 1000,
     // activeOffset: 560
 });
+
+
+

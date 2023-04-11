@@ -1,83 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Integrate Atropos JS</title>
+    <link rel="shortcut icon" href="images/apk-logo-black.svg">
+    <title>Aparoksha</title>
     <link rel="stylesheet" href="./atropos/atropos.min.css">
     <link rel="stylesheet" href="index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+    </style>
+    <!-- <script src="./app.js" defer></script> -->
+
 </head>
+
 <body>
-    <h1>Integrate Atropos JS in your web app</h1>
+    <img id="ufo" style="position: fixed;
+    height: 35px;z-index: 1000000000000000; transition: all 2s; margin: 10px;"
+        src="./images/ynm2_tuww_210520-removebg-preview.png" alt="">
+    <div id="particles-js"></div>
 
-    <div class="atroposes">
-        <!-- main Atropos container (required), add your custom class here -->
-        <div class="atropos des-atropos my-atropos">
-            <!-- scale container (required) -->
-            <div class="atropos-scale">
-            <!-- rotate container (required) -->
-            <div class="atropos-rotate">
-                <!-- inner container (required) -->
-                <div class="atropos-inner">
-                <!-- put your custom content here -->
-                    <img src="./images/bike0.jpg" data-atropos-offset="-5" style="width: 100%;" />
-                    <div class="text-over" data-atropos-offset="0">
-                        BIKE <br>
-                        RIDER
+
+    <nav style="position: fixed; z-index: 100;">
+        <ul>
+            <li>
+                <div class="home-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                    </svg>
+                </div>
+            <li>
+                <div class="about-icon">
+                   
+                </div>
+            </li>
+            <li>
+                <div class="work-icon">
+                    <div class="paper"></div>
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                </div>
+            </li>
+            <li>
+                <div class="mail-icon">
+                    <div class="mail-base">
+                        <div class="mail-top"></div>
                     </div>
                 </div>
-            </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="bg-gradient-to-b from-primary to-primary-dark  border-primary">
+        <div class=" atroposes max-w-screen-lg mx-auto ">
+
+            <div class="atropos des-atropos my-atropos atropos-header w-full atropos-rotate-touch-scroll-y"><span
+                    class="atropos-scale"
+                    style="transform: translate3d(0px, 0px, 0px); transition-duration: 300ms;"><span
+                        class="atropos-rotate"
+                        style="transition-duration: 300ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);"><span
+                            class="atropos-inner"><img class="atropos-header-spacer"
+                                src="https://atroposjs.com/images/header/atropos-bg.svg" alt="stars">
+
+                            <img data-atropos-offset="-5" src="./WebAPK/Layer 5.png" alt="mountains"
+                                style="transition-duration: 300ms; transform: translate3d(0px, 0px, 0px);">
+
+                            <img style="    width: 68%; top: 0; left: 15%;" data-atropos-offset="0"
+                                src="./WebAPK/Layer 2.png" alt="forest"
+                                style="transition-duration: 300ms; transform: translate3d(0px, 0px, 0px);">
+                            <img style="    left: 25%;
+    width: 50%; top: 0;" data-atropos-offset="15" src="./WebAPK/Layer 1.png" alt="forest"
+                                style="transition-duration: 300ms; transform: translate3d(0px, 0px, 0px);">
+                            <div data-atropos-offset="30" style="
+                                position: absolute;
+    z-index: 12205;
+    top: 0px;
+    left: 31%;
+    transition-duration: 600ms;
+    transform: translate3d(0px, 0px, 0px);
+    font-size: 90px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    ">
+                                <span class="fanctName">A</span><span class="fanctName">P</span><span
+                                    class="fanctName">A</span><span class="fanctName">R</span><span
+                                    class="fanctName">O</span><span class="fanctName">K</span><span
+                                    class="fanctName">S</span><span class="fanctName">H</span><span
+                                    class="fanctName">A</span>
+                            </div>
+                            <div style="                  position: absolute;
+    z-index: 12205;
+        top: 37px;
+    left: 57%;
+    transition-duration: 600ms;
+    transform: translate3d(0px, 0px, 0px);
+    font-size: 90px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;">
+                                <span class="fanctName tagline">R</span><span class="fanctName tagline">E</span><span
+                                    class="fanctName tagline">D</span><span class="fanctName tagline">E</span><span
+                                    class="fanctName tagline">F</span><span class="fanctName tagline">I</span><span
+                                    class="fanctName tagline">N</span><span class="fanctName tagline">E </span><span
+                                    class="fanctName tagline"> R</span><span class="fanctName tagline">E</span><span
+                                    class="fanctName tagline">A</span><span class="fanctName tagline">L</span><span
+                                    class="fanctName tagline">I</span><span class="fanctName tagline">T</span><span
+                                    class="fanctName tagline">Y</span>
+
+                            </div>
+                            <!-- <img data-atropos-offset="4"
+                                src="https://atroposjs.com/images/header/atropos-forest-front.svg" alt="forest"
+                                style="transition-duration: 300ms; transform: translate3d(0px, 0px, 0px);">
+                                
+                            <img
+                                data-atropos-offset="5" src="/images/header/atropos-logo-en.svg" alt="atropos logo"
+                                style="transition-duration: 300ms; transform: translate3d(0px, 0px, 0px);"> -->
+
+                        </span><span class="atropos-shadow"
+                            style="transform: translate3d(0px, 0px, -50px) scale(1); transition-duration: 300ms;"></span></span></span>
             </div>
         </div>
-
-        <!-- main Atropos container (required), add your custom class here -->
-        <div class="atropos des-atropos my-second-atropos">
-            <!-- scale container (required) -->
-            <div class="atropos-scale">
-            <!-- rotate container (required) -->
-            <div class="atropos-rotate">
-                <!-- inner container (required) -->
-                <div class="atropos-inner">
-                <!-- put your custom content here -->
-                    <img src="./images/cars4.jpg" data-atropos-offset="-5" style="width: 100%;" />
-                    <div class="text-over"  data-atropos-offset="0">
-                        CAR
-                    </div>
-                    <div class="text-over-2" data-atropos-offset="5">
-                        RIDER
-                    </div>
-                </div>
+    </div>
+    <div class="heading">
+        <span class="fanctName heading">G</span><span class="fanctName heading">a</span><span
+            class="fanctName heading">l</span><span class="fanctName heading">l</span><span
+            class="fanctName heading">e</span><span class="fanctName heading">r</span><span
+            class="fanctName heading">y</span>
+    </div>
+    <div class="external">
+        <div class="horizontal-scroll-wrapper">
+            <div class="img-wrapper slower">
+                <a class="box2-ancher" href="https://altphotos.com/photo/stylish-parisian-cafe-terrace-279/"
+                    target="_blank" rel="noopener"><img class="box2-img"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-cafe-terrace.jpg" alt="">
+                </a>
             </div>
+
+            <div class="img-wrapper faster">
+                <a class="box2-ancher" href="https://altphotos.com/photo/retro-boy-doll-wearing-elegant-clothes-330/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/antiquedollboy.jpg"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper slower vertical">
+                <a class="box2-ancher"
+                    href="https://altphotos.com/photo/clocks-shop-exposition-window-reflecting-the-streets-277/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper slower slower-down">
+                <a class="box2-ancher" href="https://altphotos.com/photo/swans-and-ducks-swimming-in-a-river-264/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/swanduckriver.jpg"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper">
+                <a class="box2-ancher" href="https://altphotos.com/photo/sidewalk-terrace-of-a-blue-facade-cafe-312/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-terrace.jpg"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper slower">
+                <a class="box2-ancher" href="https://altphotos.com/photo/paris-waterfront-at-sunset-1555/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-seine-boat.jpg"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper faster1">
+                <a class="box2-ancher"
+                    href="https://altphotos.com/photo/old-man-leaning-over-the-barrier-looking-at-the-river-265/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/old-man-river.jpg"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper slower slower2">
+                <a class="box2-ancher" href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper">
+                <a class="box2-ancher" href="https://altphotos.com/photo/street-scene-with-pedestrians-and-dogs-318/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/street-scene-people.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper slower">
+                <a class="box2-ancher"
+                    href="https://altphotos.com/photo/tourist-barge-on-the-river-seine-near-notre-dame-266/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/notre-dame-river-boat.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="img-wrapper slower last">
+                <a class="box2-ancher" href="https://altphotos.com/photo/skulls-decoration-in-a-shop-window-331/"
+                    target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/shop-window-reflection.jpg" alt="">
+                </a>
             </div>
         </div>
-
-        <!-- main Atropos container (required), add your custom class here -->
-        <div class="atropos des-atropos my-third-atropos">
-            <!-- scale container (required) -->
-            <div class="atropos-scale">
-            <!-- rotate container (required) -->
-            <div class="atropos-rotate">
-                <!-- inner container (required) -->
-                <div class="atropos-inner">
-                <!-- put your custom content here -->
-                    <img src="./images/house5.jpg" data-atropos-offset="-5" style="width: 100%;" />
-                    <div class="text-over"  data-atropos-offset="0" data-atropos-opacity="0.1;0.8">
-                        BEAUTIFUL
-                    </div>
-                    <div class="text-over-2" data-atropos-offset="5" data-atropos-opacity="0.5;1">
-                        BUILDING
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
     </div>
 
+    <h1 class="heading">
+        <span class="fanctName heading">A</span><span class="fanctName heading">b</span><span
+            class="fanctName heading">o</span><span class="fanctName heading">u</span><span class="fanctName heading">t
+        </span><span class="fanctName heading"> U</span><span class="fanctName heading">s</span>
+    </h1>
+    <div class="about">
 
+        <div class="about-img">
+            <img src="https://geekhaven.github.io/Aparoksha-18/img/img19.jpg" alt="">
+        </div>
+        <div class="about-text">
+            Aparoksha is the Annual Technical Festival of IIIT Allahabad (A Centre of Excellence in Information
+            Technology
+            established by Ministry of HRD, Govt. of India).
+
+            A collaboration of, for and by tech enthusiasts, Aparoksha is a platform for technocrats to code, design and
+            build
+            innovative solutions to transform India into a digitally empowered society and a knowledge based economy,
+            all
+            while
+            providing a venue for self-expression and creativity.
+
+            Aparoksha boasts a plethora of intensive and gripping technical events. To name a few, Aparoksha is home to
+            Hack
+            In the
+            North, the largest student held Hackathon in North India organised by GitHub and TopCoder. Aparoksha also
+            holds
+            TopCoder
+            Humblefool Cup,a 2-tier ACM-ICPC style national level coding contest organised in the honour of Harsha
+            Suryanarayana, an
+            alumnus of IIIT Allahabad, known to the world as one of the greatest coders India has ever produced.
+
+            The previous iterations of Aparoksha have seen eminent personalities from various walks of life coming to
+            deliver talks
+            on a diverse range of topics, as well as various performances-cum-events like The Comedy Night, EDM Night
+            and
+            After
+            Party.
+
+            Technology is best when it brings people together'. In keeping with this motto, Aparoksha also organises a
+            Tech
+            Tour, an
+            initiative taken by the Technical Society of IIIT Allahabad to conduct workshops and talks in various
+            schools
+            and
+            colleges across India to increase technical awareness, build enthusiasm in people and give back to the
+            society.
+        </div>
+    </div>
+    <h1 class="heading">
+        <span class="fanctName heading">S</span><span class="fanctName heading">P</span><span
+            class="fanctName heading">E</span><span class="fanctName heading">A</span><span
+            class="fanctName heading">K</span><span class="fanctName heading">E</span><span
+            class="fanctName heading">R</span><span class="fanctName heading">S</span>
+    </h1>
+    <div class="speakers">
+        <div class="speaker">
+            <div class="wrap animate pop">
+                <div class="overlay">
+                    <div class="overlay-content animate slide-left delay-2">
+                        <h1 class="animate slide-left pop delay-4">Sahil</h1>
+                        <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Speaker
+                            <em>1</em>
+                        </p>
+                    </div>
+                    <div class="image-content animate slide delay-5 card1"></div>
+                    <div class="dots animate">
+                        <div class="dot animate slide-up delay-6"></div>
+                        <div class="dot animate slide-up delay-7"></div>
+                        <div class="dot animate slide-up delay-8"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Trees are woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species
+                        of trees are
+                        grouped by their genus, family, and order. This helps make identifying and studying trees
+                        easier.</p>
+                    <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are
+                        very useful.
+                        Certain species of hardwood and softwood trees are excellent for timber, making furniture, and
+                        paper.</p>
+                    <p>When managed properly, trees are a good source of renewable energy and construction material.</p>
+                </div>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="wrap animate pop">
+                <div class="overlay">
+                    <div class="overlay-content animate slide-left delay-2">
+                        <h1 class="animate slide-left pop delay-4">Parja</h1>
+                        <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Speaker
+                            <em>2</em>
+                        </p>
+                    </div>
+                    <div class="image-content animate slide delay-5 card2"></div>
+                    <div class="dots animate">
+                        <div class="dot animate slide-up delay-6"></div>
+                        <div class="dot animate slide-up delay-7"></div>
+                        <div class="dot animate slide-up delay-8"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Trees are woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species
+                        of trees are
+                        grouped by their genus, family, and order. This helps make identifying and studying trees
+                        easier.</p>
+                    <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are
+                        very useful.
+                        Certain species of hardwood and softwood trees are excellent for timber, making furniture, and
+                        paper.</p>
+                    <p>When managed properly, trees are a good source of renewable energy and construction material.</p>
+                </div>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="wrap animate pop">
+                <div class="overlay">
+                    <div class="overlay-content animate slide-left delay-2">
+                        <h1 class="animate slide-left pop delay-4">Pawan</h1>
+                        <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Speaker
+                            <em>3</em>
+                        </p>
+                    </div>
+                    <div class="image-content animate slide delay-5 card3"></div>
+                    <div class="dots animate">
+                        <div class="dot animate slide-up delay-6"></div>
+                        <div class="dot animate slide-up delay-7"></div>
+                        <div class="dot animate slide-up delay-8"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Trees are woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species
+                        of trees are
+                        grouped by their genus, family, and order. This helps make identifying and studying trees
+                        easier.</p>
+                    <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are
+                        very useful.
+                        Certain species of hardwood and softwood trees are excellent for timber, making furniture, and
+                        paper.</p>
+                    <p>When managed properly, trees are a good source of renewable energy and construction material.</p>
+                </div>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="wrap animate pop">
+                <div class="overlay">
+                    <div class="overlay-content animate slide-left delay-2">
+                        <h1 class="animate slide-left pop delay-4">Varun</h1>
+                        <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Speaker
+                            <em>4</em>
+                        </p>
+                    </div>
+                    <div class="image-content animate slide delay-5 card4"></div>
+                    <div class="dots animate">
+                        <div class="dot animate slide-up delay-6"></div>
+                        <div class="dot animate slide-up delay-7"></div>
+                        <div class="dot animate slide-up delay-8"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Trees are woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species
+                        of trees are
+                        grouped by their genus, family, and order. This helps make identifying and studying trees
+                        easier.</p>
+                    <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are
+                        very useful.
+                        Certain species of hardwood and softwood trees are excellent for timber, making furniture, and
+                        paper.</p>
+                    <p>When managed properly, trees are a good source of renewable energy and construction material.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./particles.js-master/particles.js">
+    </script>
+    <script src="./particles.js-master/demo/js/app.js">
+    </script>
 
     <script src="./atropos/atropos.min.js"></script>
     <script src="./index.js"></script>
+    <script>
+        // Tamino Martinius - All rights reserved
+
+        // Copyright © 2013 Tamino Martinius (http://zaku.eu)
+        // Copyright © 2013 Particleslider.com (http://particleslider.com
+
+        // Terms of usage: http://particleslider.com/legal/license
+
+        var init = function () {
+            var isMobile = navigator.userAgent &&
+                navigator.userAgent.toLowerCase().indexOf('mobile') >= 0;
+            var isSmall = window.innerWidth < 1000;
+
+            var ps = new ParticleSlider({
+                ptlGap: isMobile || isSmall ? 1 : 0,
+                ptlSize: isMobile || isSmall ? 1 : 1,
+                width: 1e9,
+                height: 1e9
+            });
+
+            var gui = new dat.GUI();
+            gui.add(ps, 'ptlGap').min(0).max(5).step(1).onChange(function () {
+                ps.init(true);
+            });
+            gui.add(ps, 'ptlSize').min(1).max(5).step(1).onChange(function () {
+                ps.init(true);
+            });
+            gui.add(ps, 'restless');
+            gui.addColor(ps, 'color').onChange(function (value) {
+                ps.monochrome = true;
+                ps.setColor('#fff');
+                ps.init(true);
+            });
+
+
+            (window.addEventListener
+                ? window.addEventListener('click', function () { ps.init(true) }, false)
+                : window.onclick = function () { ps.init(true) });
+        }
+
+        var initParticleSlider = function () {
+            var psScript = document.createElement('script');
+            (psScript.addEventListener
+                ? psScript.addEventListener('load', init, false)
+                : psScript.onload = init);
+            psScript.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/23500/ps-0.9.js';
+            psScript.setAttribute('type', 'text/javascript');
+            document.body.appendChild(psScript);
+        }
+
+            (window.addEventListener
+                ? window.addEventListener('load', initParticleSlider, false)
+                : window.onload = initParticleSlider);
+    </script>
+
+    <script>
+        let colors = ["white", "#ff84c8", "#94aaff", "#423cfe", "#3ef7fa", "#ff3bff", "#8887ff"];
+        let names = document.getElementsByClassName('fanctName');
+        function foo() {
+            let ct = 0;
+            Array.from(names).forEach((name) => {
+
+                name.style.color = colors[Math.ceil(Math.random() * 7)];
+            })
+        }
+        setInterval(() => {
+            foo();
+        }, 150);
+        let ufo = document.getElementById('ufo');
+        window.addEventListener('mousemove', (e) => {
+            console.log(e.clientX);
+            console.log(e.clientY);
+            ufo.style.left = `${e.clientX}px`;
+            ufo.style.top = `${e.clientY}px`;
+        })
+    </script>
 </body>
+
 </html>
