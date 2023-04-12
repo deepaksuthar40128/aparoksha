@@ -943,7 +943,7 @@ p {
 }
 
 .speaker h1 {
-    font-size: 5.25vmin;
+    font-size: 3.25vmin;
     text-align: center;
     color: white;
 }
@@ -1193,4 +1193,46 @@ p {
 .tagline{
     text-shadow: 1px 1px white;
 
+}
+/* @media screen and (max-width: 768px){
+    .overlay-content{
+        width: 28vmin;
+    }
+} */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: transparent;
+    overflow-y: scroll;
+    height: 409px;
+}
+  
+  .gallery-box{
+    display: flex;
+    border: 6px solid #efecdb;
+    margin: 5px;
+}
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    /* width: 17rem; */
+    flex-wrap: wrap;
+  }
+  
+  .gallery-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px){
+    .external{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px){
+    .gallery{
+        display: none;
+    }
 }
