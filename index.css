@@ -2560,21 +2560,21 @@ p {
 }
 
 .card1 {
-    background-image: url("../images/sahil.jpg");
+    background-image: url("./images/sahil.jpg");
 }
 
 .card2 {
 
-    background-image: url("../images/parja.jpeg");
+    background-image: url("./images/parja.jpeg");
 }
 
 .card3 {
-    background-image: url("../images/pawan.jpg");
+    background-image: url("./images/pawan.jpg");
 
 }
 
 .card4 {
-    background-image: url("../images/varun.jpg");
+    background-image: url("./images/varun.jpg");
 
 }
 
