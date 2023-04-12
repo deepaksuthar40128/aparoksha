@@ -200,7 +200,7 @@
     }
 
     /* Custom List Styling */
-    ul {
+    .about-text ul {
         margin: 0;
         padding: 0;
         list-style: none;
@@ -208,7 +208,7 @@
         gap: 1rem;
     }
 
-    li {
+    .about-text li {
         display: grid;
         grid-template-columns: 0 1fr;
         gap: 1.75em;
@@ -217,16 +217,26 @@
         line-height: 1.25;
     }
 
-    ul li::before {
+    .about-text ul li::before {
         content: attr(data-icon);
         /* Make slightly larger than the li font-size
         but smaller than the li gap */
         font-size: 20px;
     }
 
+    #ufo {
+        display: none;
+    }
+
+
 }
 
-
+@media only screen and (max-width: 898px) {
+    .sponser {
+        margin: 0;
+        /* padding: 0; */
+    }
+}
 
 
 
