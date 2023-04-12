@@ -1,0 +1,71 @@
+/* Home Page */
+
+
+
+
+
+/* Gallery */
+
+
+
+
+
+/* About Us */
+
+@media only screen and (max-width: 1298px) {
+    .about {
+        display: block;
+    }
+
+    .about-text {
+        text-align: center;
+        font-size: 16px;
+        margin: auto 25px;
+        padding: auto;
+    }
+
+    .heading {
+        font-size: 28px;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 70%;
+        margin: auto;
+        height: 15%;
+    }
+
+    /* Custom List Styling */
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 1rem;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 0 1fr;
+        gap: 1.75em;
+        align-items: start;
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    ul li::before {
+        content: attr(data-icon);
+        /* Make slightly larger than the li font-size
+        but smaller than the li gap */
+        font-size: 20px;
+    }
+
+}
+
+
+
+
+
+/* Speakers */

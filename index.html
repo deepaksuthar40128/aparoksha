@@ -9,6 +9,7 @@
     <title>Aparoksha</title>
     <link rel="stylesheet" href="./atropos/atropos.min.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
     </style>
@@ -17,7 +18,7 @@
 
 <body>
     <img id="ufo" style="position: fixed;
-    height: 35px;z-index: 1000000000000000; transition: all 2s; margin: 10px;"
+    height: 35px;z-index: 100000; transition: all 2s; margin: 10px;"
         src="./images/ynm2_tuww_210520-removebg-preview.png" alt="">
     <div id="particles-js"></div>
 
@@ -25,6 +26,9 @@
     <nav style="position: fixed; z-index: 100; top: 150px;">
         <ul>
             <li>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#"></a>
+                </div>
                 <div class="home-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-house-door-fill" viewBox="0 0 16 16">
@@ -34,6 +38,9 @@
                 </div>
             </li>
             <li>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#Gallery"></a>
+                </div>
                 <div class="work-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-images" viewBox="0 0 16 16">
@@ -44,16 +51,9 @@
                 </div>
             </li>
             <li>
-                <div class="about-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-info-circle" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                        <path
-                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                    </svg>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#Speakers"></a>
                 </div>
-            </li>
-            <li>
                 <div class="mail-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-people" viewBox="0 0 16 16">
@@ -63,6 +63,9 @@
                 </div>
             </li>
             <li>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#Sponsers"></a>
+                </div>
                 <div class="mail-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-currency-dollar" viewBox="0 0 16 16">
@@ -71,8 +74,31 @@
                     </svg>
                 </div>
             </li>
+            <li>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#About"></a>
+                </div>
+                <div class="about-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg>
+                </div>
+            </li>
         </ul>
     </nav>
+    <div class="menu">
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <ul class="menu-options" id="menu-options">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Speakers</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
 
     <div class="bg-gradient-to-b from-primary to-primary-dark  border-primary">
         <div class=" atroposes max-w-screen-lg mx-auto ">
@@ -136,7 +162,7 @@
             </div>
         </div>
     </div>
-    <div class="heading">
+    <div class="heading" id="Gallery">
         <span class="fanctName heading">G</span><span class="fanctName heading">a</span><span
             class="fanctName heading">l</span><span class="fanctName heading">l</span><span
             class="fanctName heading">e</span><span class="fanctName heading">r</span><span
@@ -260,9 +286,9 @@
 
 
     <h1 class="heading">
-        <span class="fanctName heading">A</span><span class="fanctName heading">b</span><span
-            class="fanctName heading">o</span><span class="fanctName heading">u</span><span class="fanctName heading">t
-        </span><span class="fanctName heading"> U</span><span class="fanctName heading">s</span>
+        <span class="fanctName heading">A</span><span class="fanctName heading">B</span><span
+            class="fanctName heading">O</span><span class="fanctName heading">U</span><span class="fanctName heading">T
+        </span><span class="fanctName heading"> U</span><span class="fanctName heading">S</span>
     </h1>
     <div class="about">
 
@@ -270,45 +296,41 @@
             <img src="https://geekhaven.github.io/Aparoksha-18/img/img19.jpg" alt="">
         </div>
         <div class="about-text">
-            Aparoksha is the Annual Technical Festival of IIIT Allahabad (A Centre of Excellence in Information
-            Technology
-            established by Ministry of HRD, Govt. of India).
+            <ul role="list" style="list-style:inside">
 
-            A collaboration of, for and by tech enthusiasts, Aparoksha is a platform for technocrats to code, design and
-            build
-            innovative solutions to transform India into a digitally empowered society and a knowledge based economy,
-            all
-            while
-            providing a venue for self-expression and creativity.
 
-            Aparoksha boasts a plethora of intensive and gripping technical events. To name a few, Aparoksha is home to
-            Hack
-            In the
-            North, the largest student held Hackathon in North India organised by GitHub and TopCoder. Aparoksha also
-            holds
-            TopCoder
-            Humblefool Cup,a 2-tier ACM-ICPC style national level coding contest organised in the honour of Harsha
-            Suryanarayana, an
-            alumnus of IIIT Allahabad, known to the world as one of the greatest coders India has ever produced.
+                <li data-icon="🛸">Aparoksha is the Annual Technical Festival of IIIT Allahabad (A Centre of Excellence in Information
+                    Technology established by Ministry of HRD, Govt. of India).
+                </li>
+                <li data-icon="🛸">
+                    A collaboration of providing a venue for self-expression and creativity.
+                </li>
+                <li data-icon="🛸">
+                    Aparoksha boasts to the world as one of the greatest coders India has ever produced.
+                </li>
+                <li data-icon="🛸">
+                    The previous eminent personalities from various walks of life coming to Party.
+                </li>
+                <li data-icon="🛸">
+                    Technology is best keeping with this motto, Aparoksha also organises a society.
+                </li>
 
-            The previous iterations of Aparoksha have seen eminent personalities from various walks of life coming to
-            deliver talks
-            on a diverse range of topics, as well as various performances-cum-events like The Comedy Night, EDM Night
-            and
-            After
-            Party.
 
-            Technology is best when it brings people together'. In keeping with this motto, Aparoksha also organises a
-            Tech
-            Tour, an
-            initiative taken by the Technical Society of IIIT Allahabad to conduct workshops and talks in various
-            schools
-            and
-            colleges across India to increase technical awareness, build enthusiasm in people and give back to the
-            society.
+            </ul>
+
+
+
+
+
+
+
+
+
         </div>
     </div>
-    <h1 class="heading">
+
+    <h1 class="heading" id="Speakers">
+
         <span class="fanctName heading">S</span><span class="fanctName heading">P</span><span
             class="fanctName heading">E</span><span class="fanctName heading">A</span><span
             class="fanctName heading">K</span><span class="fanctName heading">E</span><span
@@ -434,7 +456,68 @@
     </div>
     
       
+    <div class="heading">
+        <span class="fanctName heading">S</span><span class="fanctName heading">P</span><span
+            class="fanctName heading">O</span><span class="fanctName heading">N</span><span
+            class="fanctName heading">S</span><span class="fanctName heading">E</span><span
+            class="fanctName heading">R</span><span class="fanctName heading">S</span>
+    </div>
+    <div class="sponsers" id="Sponsers">
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/11.a1a9d434.png" alt="" srcset=""></div>
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/22.037f40c9.png" alt="" srcset=""></div>
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/33.02811016.png" alt="" srcset=""></div>
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/44.356a6be7.png" alt="" srcset=""></div>
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/55.3b9821e4.png" alt="" srcset=""></div>
+    </div>
+    <h1 class="heading" id="About">
+        <span class="fanctName heading">A</span><span class="fanctName heading">b</span><span
+            class="fanctName heading">o</span><span class="fanctName heading">u</span><span class="fanctName heading">t
+        </span><span class="fanctName heading"> U</span><span class="fanctName heading">s</span>
+    </h1>
+    <div class="about">
 
+        <div class="about-img">
+            <img src="https://geekhaven.github.io/Aparoksha-18/img/img19.jpg" alt="">
+        </div>
+        <div class="about-text">
+            Aparoksha is the Annual Technical Festival of IIIT Allahabad (A Centre of Excellence in Information
+            Technology
+            established by Ministry of HRD, Govt. of India).
+
+            A collaboration of, for and by tech enthusiasts, Aparoksha is a platform for technocrats to code, design and
+            build
+            innovative solutions to transform India into a digitally empowered society and a knowledge based economy,
+            all
+            while
+            providing a venue for self-expression and creativity.
+
+            Aparoksha boasts a plethora of intensive and gripping technical events. To name a few, Aparoksha is home to
+            Hack
+            In the
+            North, the largest student held Hackathon in North India organised by GitHub and TopCoder. Aparoksha also
+            holds
+            TopCoder
+            Humblefool Cup,a 2-tier ACM-ICPC style national level coding contest organised in the honour of Harsha
+            Suryanarayana, an
+            alumnus of IIIT Allahabad, known to the world as one of the greatest coders India has ever produced.
+
+            The previous iterations of Aparoksha have seen eminent personalities from various walks of life coming to
+            deliver talks
+            on a diverse range of topics, as well as various performances-cum-events like The Comedy Night, EDM Night
+            and
+            After
+            Party.
+
+            Technology is best when it brings people together'. In keeping with this motto, Aparoksha also organises a
+            Tech
+            Tour, an
+            initiative taken by the Technical Society of IIIT Allahabad to conduct workshops and talks in various
+            schools
+            and
+            colleges across India to increase technical awareness, build enthusiasm in people and give back to the
+            society.
+        </div>
+    </div>
     <script src="./particles.js-master/particles.js">
     </script>
     <script src="./particles.js-master/demo/js/app.js">
@@ -442,6 +525,15 @@
     <script src="./atropos/atropos.min.js"></script>
     <script src="./index.js"></script>
     <script>
+        function toggleMenu() {
+                var menuOptions = document.getElementById("menu-options");
+                if (menuOptions.style.display === "block") {
+                    menuOptions.style.display = "none";
+                } else {
+                    menuOptions.style.display = "block";
+                }
+            }
+
         let colors = ["white", "#ff84c8", "#94aaff", "#423cfe", "#3ef7fa", "#ff3bff", "#8887ff"];
         let names = document.getElementsByClassName('fanctName');
         function foo() {
@@ -456,8 +548,6 @@
         }, 200);
         let ufo = document.getElementById('ufo');
         window.addEventListener('mousemove', (e) => {
-            console.log(e.clientX);
-            console.log(e.clientY);
             ufo.style.left = `${e.clientX}px`;
             ufo.style.top = `${e.clientY}px`;
         })
