@@ -17,6 +17,45 @@
 </head>
 
 <body>
+    <div class="loader" id="loader">
+        <svg viewBox="0 0 100 100">
+            <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+                <!-- left line -->
+                <path d="M 21 40 V 59">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 21 59; 180 21 59"
+                        dur="2s" repeatCount="indefinite" />
+                </path>
+                <!-- right line -->
+                <path d="M 79 40 V 59">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 79 59; -180 79 59"
+                        dur="2s" repeatCount="indefinite" />
+                </path>
+                <!-- top line -->
+                <path d="M 50 21 V 40">
+                    <animate attributeName="d" values="M 50 21 V 40; M 50 59 V 40" dur="2s" repeatCount="indefinite" />
+                </path>
+                <!-- btm line -->
+                <path d="M 50 60 V 79">
+                    <animate attributeName="d" values="M 50 60 V 79; M 50 98 V 79" dur="2s" repeatCount="indefinite" />
+                </path>
+                <!-- top box -->
+                <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
+                    <animate attributeName="stroke" values="rgba(255,255,255,1); rgba(100,100,100,0)" dur="2s"
+                        repeatCount="indefinite" />
+                </path>
+                <!-- mid box -->
+                <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z" />
+                <!-- btm box -->
+                <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
+                    <animate attributeName="stroke" values="rgba(100,100,100,0); rgba(255,255,255,1)" dur="2s"
+                        repeatCount="indefinite" />
+                </path>
+                <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0 0; 0 -19" dur="2s"
+                    repeatCount="indefinite" />
+            </g>
+        </svg>
+        <div class="load-text">Joining the Blocks...</div>
+    </div>
     <img id="ufo" style="position: fixed;
     height: 35px;z-index: 100000; transition: all 2s; margin: 10px;"
         src="./images/ynm2_tuww_210520-removebg-preview.png" alt="">
@@ -469,6 +508,23 @@
     
         </div>
     </div>
+    <script>
+        window.onload = function () {
+                var images = document.getElementsByTagName('img');
+                var loadedImages = 0;
+
+                for (var i = 0; i < images.length; i++) {
+                    if (images[i].complete) {
+                        loadedImages++;
+                    }
+                }
+
+                if (loadedImages == images.length) {
+                    document.getElementById('loader').style.display = 'none';
+                }
+            }
+
+    </script>
     <script src="./particles.js-master/particles.js">
     </script>
     <script src="./particles.js-master/demo/js/app.js">

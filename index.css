@@ -20,7 +20,16 @@ body {
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////// */
+ 
 
+.loader svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+}
 
 .menu {
     position: fixed;
@@ -1333,4 +1342,21 @@ p {
     .image-content {
         width: 50vmin;
     }
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 111;
+    background-color: black;
+    color: white;
+}
+.load-text{
+        position: fixed;
+            left: 44%;
+            font-size: 23px;
+            top: 63%;
 }
