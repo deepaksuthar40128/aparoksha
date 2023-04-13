@@ -489,14 +489,15 @@
         window.onload = function () {
             var images = document.getElementsByTagName('img');
             let loadIn = document.getElementsByClassName('in-load')[0];
+             console.log(loadIn.style.width);
             var loadedImages = 0;
 
             for (var i = 0; i < images.length; i++) {
                 if (images[i].complete) {
                     loadedImages++;
                     let percentage = Math.ceil((loadedImages / images.length) * 100);
-                    console.log(percentage);
                     loadIn.style.width = `${percentage}%`;
+                    console.log(loadIn.style.width);
                 }
             }
 
