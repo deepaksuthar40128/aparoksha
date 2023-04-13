@@ -1460,6 +1460,7 @@ p {
     width: 0;
     height: 100%;
     background-color: #5be1ff;
+    transition: all 1s;
 }
 
 .loading-percentage {
