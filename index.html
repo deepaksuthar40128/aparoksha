@@ -18,43 +18,22 @@
 
 <body>
     <div class="loader" id="loader">
-        <svg viewBox="0 0 100 100">
-            <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
-                <!-- left line -->
-                <path d="M 21 40 V 59">
-                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 21 59; 180 21 59"
-                        dur="2s" repeatCount="indefinite" />
-                </path>
-                <!-- right line -->
-                <path d="M 79 40 V 59">
-                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 79 59; -180 79 59"
-                        dur="2s" repeatCount="indefinite" />
-                </path>
-                <!-- top line -->
-                <path d="M 50 21 V 40">
-                    <animate attributeName="d" values="M 50 21 V 40; M 50 59 V 40" dur="2s" repeatCount="indefinite" />
-                </path>
-                <!-- btm line -->
-                <path d="M 50 60 V 79">
-                    <animate attributeName="d" values="M 50 60 V 79; M 50 98 V 79" dur="2s" repeatCount="indefinite" />
-                </path>
-                <!-- top box -->
-                <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
-                    <animate attributeName="stroke" values="rgba(255,255,255,1); rgba(100,100,100,0)" dur="2s"
-                        repeatCount="indefinite" />
-                </path>
-                <!-- mid box -->
-                <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z" />
-                <!-- btm box -->
-                <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
-                    <animate attributeName="stroke" values="rgba(100,100,100,0); rgba(255,255,255,1)" dur="2s"
-                        repeatCount="indefinite" />
-                </path>
-                <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0 0; 0 -19" dur="2s"
-                    repeatCount="indefinite" />
-            </g>
-        </svg>
-        <div class="load-text">Joining the Blocks...</div>
+        <div class="load-wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <span>Loading</span>
+        </div>
+        <div class="loading-percentage">
+            <div class="out-load">
+                <div class="in-load">
+
+                </div>
+            </div>
+        </div>
     </div>
     <img id="ufo" style="position: fixed;
     height: 35px;z-index: 100000; transition: all 2s; margin: 10px;"
@@ -130,7 +109,7 @@
     </nav>
     <div class="menu">
         <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-        <ul class="menu-options" id="menu-options" >
+        <ul class="menu-options" id="menu-options">
             <li><a href="#">Home</a></li>
             <li><a href="#Gallery">Gallery</a></li>
             <li><a href="#Speakers">Speakers</a></li>
@@ -232,75 +211,73 @@
     <div class="external">
         <div class="horizontal-scroll-wrapper">
             <div class="img-wrapper slower">
-                <a class="box2-ancher" href="#"
-                    target="_blank" rel="noopener"><img class="box2-img"
-                        src="https://lh3.googleusercontent.com/u/0/d/1B6M6kAvz7raIZA9sLU-uixsLxkurRtWF=w1848-h990-iv1" alt="">
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener"><img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1B6M6kAvz7raIZA9sLU-uixsLxkurRtWF=w1848-h990-iv1"
+                        alt="">
                 </a>
             </div>
 
             <div class="img-wrapper faster">
-                <a class="box2-ancher" href="#"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://lh3.googleusercontent.com/u/0/d/1g2f0CPYPEpJ8FIXPwmEHvtIc5Znu2-8C=w1848-h990-iv1"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1g2f0CPYPEpJ8FIXPwmEHvtIc5Znu2-8C=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper slower vertical">
-                <a class="box2-ancher"
-                    href="#"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://lh3.googleusercontent.com/u/0/d/1kR9thGMYVvCxYjzzLCBmZ9ARYow5aAYb=w1848-h990-iv1"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1kR9thGMYVvCxYjzzLCBmZ9ARYow5aAYb=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper slower slower-down">
-                <a class="box2-ancher" href="#"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://lh3.googleusercontent.com/u/0/d/1T1-0eqR8lBqWfnSlfqk8bqUoN_1jo8qp=w1848-h990-iv1"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1T1-0eqR8lBqWfnSlfqk8bqUoN_1jo8qp=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper">
-                <a class="box2-ancher" href="#"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://lh3.googleusercontent.com/u/0/d/1F11G1J7QjcDGcwNwhgvgyQONj_vEFDxE=w1848-h990-iv1"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1F11G1J7QjcDGcwNwhgvgyQONj_vEFDxE=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper slower">
-                <a class="box2-ancher" href="#"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://lh3.googleusercontent.com/u/0/d/1mSWYQ8WyzfwWPcHbH6lvN8BX-7sTGbfm=w1848-h990-iv1"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1mSWYQ8WyzfwWPcHbH6lvN8BX-7sTGbfm=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper faster1">
-                <a class="box2-ancher"
-                    href="#"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://lh3.googleusercontent.com/u/0/d/1aVdI2tr7KT5nQeZllgZkEl9kmFp0RmRi=w1848-h990-iv1"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1aVdI2tr7KT5nQeZllgZkEl9kmFp0RmRi=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper slower slower2">
-                <a class="box2-ancher" href="#"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://lh3.googleusercontent.com/u/0/d/1hiOkEEYbpRNIUul1dQbrQCyE7n7LaFsz=w1848-h990-iv1"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1hiOkEEYbpRNIUul1dQbrQCyE7n7LaFsz=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper">
-                <a class="box2-ancher" href="#"
-                    target="_blank" rel="noopener">
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
                     <img class="box2-img"
-                        src="https://lh3.googleusercontent.com/u/0/d/1tRqtucWVKUQNsMuWPWjJYqzgUHNEgVmi=w1848-h990-iv1" alt="">
+                        src="https://lh3.googleusercontent.com/u/0/d/1tRqtucWVKUQNsMuWPWjJYqzgUHNEgVmi=w1848-h990-iv1"
+                        alt="">
                 </a>
             </div>
 
@@ -324,7 +301,7 @@
     </div>
 
 
-   
+
 
     <h1 class="heading" id="Speakers">
 
@@ -470,14 +447,14 @@
         </span><span class="fanctName heading"> U</span><span class="fanctName heading">S</span>
     </h1>
     <div class="about">
-    
+
         <div class="about-img">
             <img src="https://geekhaven.github.io/Aparoksha-18/img/img19.jpg" alt="">
         </div>
         <div class="about-text">
             <ul role="list" style="list-style:inside">
-    
-    
+
+
                 <li data-icon="🛸">Aparoksha is the Annual Technical Festival of IIIT Allahabad (A Centre of Excellence
                     in Information
                     Technology established by Ministry of HRD, Govt. of India).
@@ -494,35 +471,39 @@
                 <li data-icon="🛸">
                     Technology is best keeping with this motto, Aparoksha also organises a society.
                 </li>
-    
-    
+
+
             </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
         </div>
     </div>
     <script>
         window.onload = function () {
-                var images = document.getElementsByTagName('img');
-                var loadedImages = 0;
+            var images = document.getElementsByTagName('img');
+            let loadIn = document.getElementsByClassName('in-load')[0];
+            var loadedImages = 0;
 
-                for (var i = 0; i < images.length; i++) {
-                    if (images[i].complete) {
-                        loadedImages++;
-                    }
-                }
-
-                if (loadedImages == images.length) {
-                    document.getElementById('loader').style.display = 'none';
+            for (var i = 0; i < images.length; i++) {
+                if (images[i].complete) {
+                    loadedImages++;
+                    let percentage = Math.ceil((loadedImages / images.length) * 100);
+                    console.log(percentage);
+                    loadIn.style.width = `${percentage}%`;
                 }
             }
+
+            if (loadedImages == images.length) {
+                document.getElementById('loader').style.display = 'none';
+            }
+        }
 
     </script>
     <script src="./particles.js-master/particles.js">
