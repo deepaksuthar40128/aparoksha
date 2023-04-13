@@ -131,6 +131,7 @@ body {
     z-index: 100;
 }
 
+
 .menu-toggle {
     background-color: transparent;
     border: none;
@@ -518,7 +519,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: Roboto Mono, Menlo, Monaco, Consolas, courier new, monospace
+    font-family: Roboto Mono, Menlo, Monaco, Consolas, courier new, monospace;
 }
 
 audio,
@@ -530,7 +531,7 @@ object,
 svg,
 video {
     display: block;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 img,
@@ -880,9 +881,6 @@ a {
     position: relative;
 }
 
-.fanctName {
-    font-weight: 500;
-}
 
 
 
@@ -1075,9 +1073,6 @@ p {
     font-size: 20px;
 }
 
-.fanctName {
-    font-family: 'Orbitron', sans-serif;
-}
 
 .speakers {
     display: flex;
@@ -1178,6 +1173,19 @@ p {
     border-radius: 50%;
     transition: .3s ease-in-out .3s;
 }
+
+.text-b{
+    font-size: 90px;
+    top: 0px;
+    left: 31%;
+}
+
+.text-s {
+    font-size: 90px;
+    top: 5%;
+    left: 60%;
+}
+
 
 .text {
     position: absolute;
@@ -1340,8 +1348,12 @@ p {
 }
 
 .fanctName {
-    text-shadow: 4px 4px white;
+    text-shadow: 3px 3px white;
+
+    font-weight: 500;
+    font-family: 'Orbitron', sans-serif;
     margin-right: 3px;
+ 
 }
 
 .tagline {
@@ -1422,7 +1434,6 @@ p {
     nav {
         display: none;
     }
-
     .external {
         display: none;
     }
