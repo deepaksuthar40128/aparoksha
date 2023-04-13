@@ -1447,26 +1447,3 @@ p {
     color: white;
 }
 
-.out-load {
-    width: 200px;
-    border: 1px solid white;
-    background-color: transparent;
-    height: 10px;
-    border-radius: 5px;
-
-}
-
-.in-load {
-    width: 0;
-    height: 100%;
-    background-color: #5be1ff;
-    transition: all 1s;
-}
-
-.loading-percentage {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 62%;
-    transition: all 0.5s;
-}
