@@ -7,19 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/apk-logo-black.svg">
     <title>Aparoksha</title>
-    <link rel="stylesheet" href="./atropos/atropos.min.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="responsive.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
     </style>
+
     <script src="https://kit.fontawesome.com/d7fb88eac0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./atropos/atropos.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+
 
 </head>
 
 <body>
+    <div class="loader" id="loader">
+        <div class="load-wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <span>Loading</span>
+        </div>
+    </div>
     <img id="ufo" style="position: fixed;
-    height: 35px;z-index: 1000000000000000; transition: all 2s; margin: 10px;"
+    height: 35px;z-index: 100000; transition: all 2s; margin: 10px;"
         src="./images/ynm2_tuww_210520-removebg-preview.png" alt="">
     <div id="particles-js"></div>
 
@@ -27,6 +41,9 @@
     <nav style="position: fixed; z-index: 100; top: 150px;">
         <ul>
             <li>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#"></a>
+                </div>
                 <div class="home-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-house-door-fill" viewBox="0 0 16 16">
@@ -36,6 +53,9 @@
                 </div>
             </li>
             <li>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#Gallery"></a>
+                </div>
                 <div class="work-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-images" viewBox="0 0 16 16">
@@ -46,16 +66,9 @@
                 </div>
             </li>
             <li>
-                <div class="about-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-info-circle" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                        <path
-                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                    </svg>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#Speakers"></a>
                 </div>
-            </li>
-            <li>
                 <div class="mail-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-people" viewBox="0 0 16 16">
@@ -65,6 +78,9 @@
                 </div>
             </li>
             <li>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#Sponsers"></a>
+                </div>
                 <div class="mail-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-currency-dollar" viewBox="0 0 16 16">
@@ -73,8 +89,31 @@
                     </svg>
                 </div>
             </li>
+            <li>
+                <div class="dummy-a">
+                    <a style="width: 100%; height: 100%; display: block;" href="#About"></a>
+                </div>
+                <div class="about-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg>
+                </div>
+            </li>
         </ul>
     </nav>
+    <div class="menu">
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <ul class="menu-options" id="menu-options">
+            <li><a href="#">Home</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
+            <li><a href="#Speakers">Speakers</a></li>
+            <li><a href="#Sponsers">Sponsors</a></li>
+            <li><a href="#About">About Us</a></li>
+        </ul>
+    </div>
 
     <div class="bg-gradient-to-b from-primary to-primary-dark  border-primary">
         <div class=" atroposes max-w-screen-lg mx-auto ">
@@ -96,14 +135,11 @@
                             <img style="    left: 25%;
     width: 50%; top: 0;" data-atropos-offset="15" src="./WebAPK/Layer 1.png" alt="forest"
                                 style="transition-duration: 300ms; transform: translate3d(0px, 0px, 0px);">
-                            <div data-atropos-offset="30" style="
+                            <div class="text-b" data-atropos-offset="30" style="
                                 position: absolute;
     z-index: 12205;
-    top: 0px;
-    left: 31%;
     transition-duration: 600ms;
     transform: translate3d(0px, 0px, 0px);
-    font-size: 90px;
     color: white;
     font-family: 'Orbitron', sans-serif;
     ">
@@ -113,13 +149,10 @@
                                     class="fanctName">S</span><span class="fanctName">H</span><span
                                     class="fanctName">A</span>
                             </div>
-                            <div style="                  position: absolute;
+                            <div class="text-s" style="                  position: absolute;
     z-index: 12205;
-        top: 37px;
-    left: 57%;
     transition-duration: 600ms;
     transform: translate3d(0px, 0px, 0px);
-    font-size: 90px;
     color: white;
     font-family: 'Orbitron', sans-serif;">
                                 <span class="fanctName tagline">R</span><span class="fanctName tagline">E</span><span
@@ -138,88 +171,108 @@
             </div>
         </div>
     </div>
-    <div class="heading">
+    <div class="heading gallery-r" id="Gallery">
         <span class="fanctName heading">G</span><span class="fanctName heading">a</span><span
             class="fanctName heading">l</span><span class="fanctName heading">l</span><span
             class="fanctName heading">e</span><span class="fanctName heading">r</span><span
             class="fanctName heading">y</span>
     </div>
+    <div class="gallery">
+        <div class="gallery-box">
+            <div class="gallery-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="gallery-box">
+            <div class="gallery-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="gallery-box">
+            <div class="gallery-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="gallery-box">
+            <div class="gallery-item">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg" alt="Image 1">
+            </div>
+        </div>
+    </div>
     <div class="external">
         <div class="horizontal-scroll-wrapper">
             <div class="img-wrapper slower">
-                <a class="box2-ancher" href="https://altphotos.com/photo/stylish-parisian-cafe-terrace-279/"
-                    target="_blank" rel="noopener"><img class="box2-img"
-                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-cafe-terrace.jpg" alt="">
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener"><img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1B6M6kAvz7raIZA9sLU-uixsLxkurRtWF=w1848-h990-iv1"
+                        alt="">
                 </a>
             </div>
 
             <div class="img-wrapper faster">
-                <a class="box2-ancher" href="https://altphotos.com/photo/retro-boy-doll-wearing-elegant-clothes-330/"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/antiquedollboy.jpg"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1g2f0CPYPEpJ8FIXPwmEHvtIc5Znu2-8C=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper slower vertical">
-                <a class="box2-ancher"
-                    href="https://altphotos.com/photo/clocks-shop-exposition-window-reflecting-the-streets-277/"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1kR9thGMYVvCxYjzzLCBmZ9ARYow5aAYb=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper slower slower-down">
-                <a class="box2-ancher" href="https://altphotos.com/photo/swans-and-ducks-swimming-in-a-river-264/"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/swanduckriver.jpg"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1T1-0eqR8lBqWfnSlfqk8bqUoN_1jo8qp=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper">
-                <a class="box2-ancher" href="https://altphotos.com/photo/sidewalk-terrace-of-a-blue-facade-cafe-312/"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-terrace.jpg"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1F11G1J7QjcDGcwNwhgvgyQONj_vEFDxE=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper slower">
-                <a class="box2-ancher" href="https://altphotos.com/photo/paris-waterfront-at-sunset-1555/"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-seine-boat.jpg"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1mSWYQ8WyzfwWPcHbH6lvN8BX-7sTGbfm=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper faster1">
-                <a class="box2-ancher"
-                    href="https://altphotos.com/photo/old-man-leaning-over-the-barrier-looking-at-the-river-265/"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/old-man-river.jpg"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1aVdI2tr7KT5nQeZllgZkEl9kmFp0RmRi=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper slower slower2">
-                <a class="box2-ancher" href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/"
-                    target="_blank" rel="noopener">
-                    <img class="box2-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg"
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
+                    <img class="box2-img"
+                        src="https://lh3.googleusercontent.com/u/0/d/1hiOkEEYbpRNIUul1dQbrQCyE7n7LaFsz=w1848-h990-iv1"
                         alt="">
                 </a>
             </div>
 
             <div class="img-wrapper">
-                <a class="box2-ancher" href="https://altphotos.com/photo/street-scene-with-pedestrians-and-dogs-318/"
-                    target="_blank" rel="noopener">
+                <a class="box2-ancher" href="#" target="_blank" rel="noopener">
                     <img class="box2-img"
-                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/street-scene-people.jpg" alt="">
+                        src="https://lh3.googleusercontent.com/u/0/d/1tRqtucWVKUQNsMuWPWjJYqzgUHNEgVmi=w1848-h990-iv1"
+                        alt="">
                 </a>
             </div>
 
-            <div class="img-wrapper slower">
+            <!-- <div class="img-wrapper slower">
                 <a class="box2-ancher"
                     href="https://altphotos.com/photo/tourist-barge-on-the-river-seine-near-notre-dame-266/"
                     target="_blank" rel="noopener">
@@ -234,9 +287,10 @@
                     <img class="box2-img"
                         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/shop-window-reflection.jpg" alt="">
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
+
 
     <h1 class="heading">
         <span class="fanctName heading">A</span><span class="fanctName heading">B</span><span
@@ -276,13 +330,8 @@
 
 
 
+    <h1 class="heading" id="Speakers">
 
-
-
-
-        </div>
-    </div>
-    <h1 class="heading">
         <span class="fanctName heading">S</span><span class="fanctName heading">P</span><span
             class="fanctName heading">E</span><span class="fanctName heading">A</span><span
             class="fanctName heading">K</span><span class="fanctName heading">E</span><span
@@ -406,6 +455,78 @@
             </div>
         </div>
     </div>
+    <div class="heading">
+        <span class="fanctName heading">S</span><span class="fanctName heading">P</span><span
+            class="fanctName heading">O</span><span class="fanctName heading">N</span><span
+            class="fanctName heading">S</span><span class="fanctName heading">E</span><span
+            class="fanctName heading">R</span><span class="fanctName heading">S</span>
+    </div>
+    <div class="sponsers" id="Sponsers">
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/11.a1a9d434.png" alt="" srcset=""></div>
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/22.037f40c9.png" alt="" srcset=""></div>
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/33.02811016.png" alt="" srcset=""></div>
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/44.356a6be7.png" alt="" srcset=""></div>
+        <div class="sponser"><img src="https://www.texus.io/_next/static/media/55.3b9821e4.png" alt="" srcset=""></div>
+    </div>
+    <h1 class="heading" id="About">
+        <span class="fanctName heading">A</span><span class="fanctName heading">B</span><span
+            class="fanctName heading">O</span><span class="fanctName heading">U</span><span class="fanctName heading">T
+        </span><span class="fanctName heading"> U</span><span class="fanctName heading">S</span>
+    </h1>
+    <div class="about">
+
+        <div class="about-img">
+            <img src="https://geekhaven.github.io/Aparoksha-18/img/img19.jpg" alt="">
+        </div>
+        <div class="about-text">
+            <ul role="list" style="list-style:inside">
+
+
+                <li data-icon="🛸">Aparoksha is the Annual Technical Festival of IIIT Allahabad (A Centre of Excellence
+                    in Information
+                    Technology established by Ministry of HRD, Govt. of India).
+                </li>
+                <li data-icon="🛸">
+                    A collaboration of providing a venue for self-expression and creativity.
+                </li>
+                <li data-icon="🛸">
+                    Aparoksha boasts to the world as one of the greatest coders India has ever produced.
+                </li>
+                <li data-icon="🛸">
+                    The previous eminent personalities from various walks of life coming to Party.
+                </li>
+                <li data-icon="🛸">
+                    Technology is best keeping with this motto, Aparoksha also organises a society.
+                </li>
+
+
+            </ul>
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            var images = document.getElementsByTagName('img');
+            var loadedImages = 0;
+
+            for (var i = 0; i < images.length; i++) {
+                if (images[i].complete) {
+                    loadedImages++;
+                }
+            }
+            if (loadedImages == images.length) {
+                document.getElementById('loader').style.display = 'none';
+            }
+        }
+
 
 
 
@@ -537,6 +658,15 @@
     <script src="./atropos/atropos.min.js"></script>
     <script src="./index.js"></script>
     <script>
+        function toggleMenu() {
+            var menuOptions = document.getElementById("menu-options");
+            if (menuOptions.style.display === "block") {
+                menuOptions.style.display = "none";
+            } else {
+                menuOptions.style.display = "block";
+            }
+        }
+
         let colors = ["white", "#ff84c8", "#94aaff", "#423cfe", "#3ef7fa", "#ff3bff", "#8887ff"];
         let names = document.getElementsByClassName('fanctName');
         function foo() {
@@ -551,8 +681,6 @@
         }, 200);
         let ufo = document.getElementById('ufo');
         window.addEventListener('mousemove', (e) => {
-            console.log(e.clientX);
-            console.log(e.clientY);
             ufo.style.left = `${e.clientX}px`;
             ufo.style.top = `${e.clientY}px`;
         })
@@ -560,3 +688,4 @@
 </body>
 
 </html>
+Footer
