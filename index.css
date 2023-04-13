@@ -22,13 +22,7 @@ body {
 /* ///////////////////////////////////////////////////////////////////////////////// */
 
 
-.menu {
-    position: fixed;
-    top: 50px;
-    color: white;
-    left: 0;
-    z-index: 1;
-}
+
 
 .menu-toggle {
     background-color: transparent;
@@ -1246,7 +1240,7 @@ p {
 }
 
 .fanctName {
-    text-shadow: 4px 4px white;
+    text-shadow: 3px 3px white;
     font-weight: 500;
     font-family: 'Orbitron', sans-serif;
 }

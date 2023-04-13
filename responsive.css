@@ -93,14 +93,35 @@
         top: 10%;
         left: 48%;
     }
+
+    .menu {
+        font-size: 20px;
+        position: fixed;
+        top: 3%;
+        color: white;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu-toggle{
+        font-size: 28px;
+    }
+
+    .gallery-r{
+        position: relative;
+        left: 5%;
+    }
 }
 
 @media only screen and (max-width: 600px){
 
-    .text-s {
+    .tagline{
         font-size: 15px;
-        top: 10%;
-        left: 41%;
+    }
+
+    .text-s{
+        top: 6%;
+        left: 49%;
     }
 
     .text-b {
@@ -110,15 +131,39 @@
     }
 
     .atropos-inner{
-        top: 25%;
+        top: 15%;
         left: 0%;
     }
+
+    .menu {
+        font-size: 20px;
+        position: fixed;
+        top: 3%;
+        color: white;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu-toggle{
+        font-size: 25px;
+    }
+
+    .gallery-r{
+        margin-top: 60px;
+        margin-bottom: -80px;
+    }
+
 }
 
 @media only screen and (max-width: 500px){
 
-    .text-s {
-        display: none;
+    .tagline{
+        font-size: 10px;
+    }
+
+    .text-s{
+        top: 6%;
+        left: 48%;
     }
 
     .text-b {
@@ -131,6 +176,22 @@
         top: 25%;
         left: 0%;
     }
+
+    .menu {
+        font-size: 20px;
+        position: fixed;
+        top: 3%;
+        color: white;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu-toggle{
+        font-size: 25px;
+    }
+
+    
+    
 }
 
 @media only screen and (max-width: 400px){
@@ -138,6 +199,10 @@
         font-size: 35px;
         top: -2%;
         left: 19%;
+    }
+
+    .menu-toggle{
+        font-size: 25px;
     }
 
     .menu {
@@ -149,6 +214,27 @@
         z-index: 1;
     }
 
+    .tagline{
+        font-size: 10px;
+    }
+
+    .text-s{
+        top: 6%;
+        left: 48%;
+    }
+
+    .fanctName{
+        margin-right: 3px;
+        text-shadow: 1px 1px white;
+        font-weight: 500;
+    }
+
+    /* .gallery-r{
+        position: relative;
+        top: 55%;
+        left: 30%;
+    } */
+
 }
 
 @media only screen and (max-width: 300px){
@@ -158,13 +244,32 @@
         left: 22%;
     }
 
-    /* .menu {
+    .menu-toggle{
+        font-size: 18px;
+    }
+
+    .menu {
         position: fixed;
-        top: 50px;
+        top: 2%;
         color: white;
         left: 0;
         z-index: 1;
-    } */
+    }
+
+    .tagline{
+        font-size: 7px;
+    }
+
+    .text-s{
+        top: -1%;
+        left: 41%;
+    }
+
+    .fanctName{
+        margin-right: 3px;
+        text-shadow: 0.5px 0.5px white;
+        font-weight: 500;
+    }
 }
 /* Gallery */
 
@@ -187,7 +292,7 @@
     }
 
     .heading {
-        font-size: 28px;
+        font-size: 50px;
         font-weight: 500;
         color: white;
         text-align: center;
@@ -226,6 +331,22 @@
 
 }
 
+@media only screen and (max-width: 600px){
+    .heading{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .heading{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 300px){
+    .heading{
+        font-size: 25px;
+    }
+}
 
 
 
