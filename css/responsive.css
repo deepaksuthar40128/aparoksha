@@ -188,6 +188,7 @@
     .text-s {
         top: 10%;
         left: 48%;
+        display:none;
     }
 
     .text-b {
