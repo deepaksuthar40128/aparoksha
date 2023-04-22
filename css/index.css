@@ -506,6 +506,10 @@
  .container {
      width: 100%
  }
+ .contactus{
+    text-align: center;
+    color: white;
+ }
 
 
  .duration-200 {
@@ -916,6 +920,25 @@
      align-items: center;
      display: flex;
  }
+ .more1{
+    font-family:'Times New Roman', Times, serif;
+    color: aquamarine;
+ }
+ .more{
+    font-size: 18px;
+    font-weight: bolder;
+ }
+ .logo1{
+    display: inline-block;
+    padding-right: 56px;
+ }
+ .logo2{
+    display: inline-block;
+ }
+ .logo3{
+    padding-top: 31px;
+ }
+   
 
  .about-img img {
      width: 100%;
@@ -1501,3 +1524,33 @@
      color: #fff;
      left: 15%;
  }
+.om{
+    display: inline;
+
+}
+.fb{
+    padding-top: 12px;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 100px;
+    
+}   
+.twt{
+    color: white;
+    padding-bottom: 50px;
+    font-size: 100px;
+   
+}
+.gp{
+    color: white;
+    padding-bottom: 50px;
+    font-size: 100px;
+    
+}
+
+
+
+.icon{
+    color: white;
+    font-size: large;
+}
