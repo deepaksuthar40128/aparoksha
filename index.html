@@ -452,18 +452,18 @@
             }
         }
 
-        let colors = ["white", "#ff84c8", "#94aaff", "#423cfe", "#3ef7fa", "#ff3bff", "#8887ff"];
-        let names = document.getElementsByClassName('fanctName');
-        function foo() {
-            let ct = 0;
-            Array.from(names).forEach((name) => {
+//         let colors = ["white", "#ff84c8", "#94aaff", "#423cfe", "#3ef7fa", "#ff3bff", "#8887ff"];
+//         let names = document.getElementsByClassName('fanctName');
+//         function foo() {
+//             let ct = 0;
+//             Array.from(names).forEach((name) => {
 
-                name.style.color = colors[Math.ceil(Math.random() * 7)];
-            })
-        }
-        setInterval(() => {
-            foo();
-        }, 200);
+//                 name.style.color = colors[Math.ceil(Math.random() * 7)];
+//             })
+//         }
+//         setInterval(() => {
+//             foo();
+//         }, 200);
         let ufo = document.getElementById('ufo');
         window.addEventListener('mousemove', (e) => {
             ufo.style.left = `${e.clientX}px`;
