@@ -147,7 +147,7 @@
  }
 
  nav ul li:nth-child(3):after {
-     content: "Speakers";
+     content: "Events";
      line-height: 85px;
  }
 
@@ -158,6 +158,11 @@
 
  nav ul li:nth-child(5):after {
      content: "About";
+     line-height: 70px;
+ }
+
+ nav ul li:nth-child(6):after {
+     content: "Contact Us";
      line-height: 70px;
  }
 
@@ -507,6 +512,11 @@
      width: 100%
  }
 
+ .contactus {
+     text-align: center;
+     color: white;
+     padding-top: 50px;
+ }
 
  .duration-200 {
      transition-duration: .2s
@@ -893,6 +903,7 @@
 
  .about {
      color: white;
+     padding: 50px 0;
  }
 
  .heading {
@@ -915,10 +926,35 @@
      padding: 20px;
      align-items: center;
      display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .more1 {
+     font-family: 'Times New Roman', Times, serif;
+     color: aquamarine;
+ }
+
+ .more {
+     font-size: 18px;
+     font-weight: bolder;
+ }
+
+ .logo1 {
+     display: inline-block;
+     padding-right: 56px;
+ }
+
+ .logo2 {
+     display: inline-block;
+ }
+
+ .logo3 {
+     padding-top: 31px;
  }
 
  .about-img img {
-     width: 100%;
+     width: 50%;
  }
 
  .tagline {
@@ -930,6 +966,7 @@
      display: flex;
      flex-wrap: wrap;
      justify-content: space-around;
+     margin-bottom: 50px;
  }
 
  .speaker {
@@ -1200,7 +1237,8 @@
  }
 
  .fanctName {
-     text-shadow: 3px 3px #c400ff;;
+     text-shadow: 3px 3px #c400ff;
+     ;
 
      font-weight: 500;
      font-family: 'Orbitron', sans-serif;
@@ -1215,23 +1253,25 @@
 
 
  .sponsers {
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
-     align-items: center;
      padding: 100px;
      flex-wrap: wrap;
  }
 
  .sponser {
-     height: 79px;
-     margin: 58px 100px;
+     height: 110px;
+     margin: 58px auto;
  }
 
  .sponser img {
-     max-height: 100px;
+     max-height: 110px;
+     height: 100%;
+     display: block;
+     margin: auto;
  }
 
+ .invert_color {
+     filter: invert(1);
+ }
 
  @media (min-width: 768px) {
      .menu {
@@ -1295,8 +1335,10 @@
 
  .footer-content p {
      max-width: 500px;
-     margin: 10px auto;
+     /* margin: 10px auto; */
      line-height: 28px;
+     font-weight: 500;
+     letter-spacing: 1px;
      font-size: 14px;
  }
 
@@ -1336,7 +1378,7 @@
  }
 
  .footer-bottom {
-     background: #000;
+     background: #00000070;
      width: 100vw;
      padding: 20px;
      padding-bottom: 40px;
@@ -1500,4 +1542,47 @@
      letter-spacing: 12px;
      color: #fff;
      left: 15%;
+ }
+
+ .om {
+     display: inline;
+
+ }
+
+ .fb {
+     padding-top: 12px;
+     padding-bottom: 50px;
+     color: white;
+     font-size: 100px;
+
+ }
+
+ .twt {
+     color: white;
+     padding-bottom: 50px;
+     font-size: 100px;
+
+ }
+
+ .gp {
+     color: white;
+     padding-bottom: 50px;
+     font-size: 100px;
+
+ }
+
+
+
+ .icon {
+     color: white;
+     font-size: large;
+ }
+ .address {
+    padding-top: 20px;
+     display: flex;
+     flex-direction: column;
+     /* align-items: center;
+    justify-content: center; */
+     font-size: 1.4rem;
+     font-weight: 600;
  }
