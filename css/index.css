@@ -1020,9 +1020,9 @@
      display: flex;
      flex-direction: column;
      justify-content: space-between;
-     width: 15vmin;
+     width: 36vmin;
      height: 100%;
-     padding: .5rem 0 0 .5rem;
+     padding: 8.5rem 0 0 0.5rem;
      border: 3px solid;
      border-image: linear-gradient(-50deg, #7a81ff, #99ebff, #ff9e9e, #5062f8, #0e053a, #ffffff, #b7c4ff) 1;
      transition: .3s ease-in-out .2s;
@@ -1033,7 +1033,7 @@
      position: absolute;
      top: 0;
      right: 0;
-     width: 60vmin;
+     width: 44vmin;
      height: 100%;
 
      background-size: cover;
@@ -1218,23 +1218,49 @@
  }
 
  .card1 {
-     background-image: url("../images/sahil.jpg");
+     background-image: url("../images//events/cfresh.png");
  }
 
  .card2 {
 
-     background-image: url("../images/parja.jpeg");
+     background-image: url("../images/events/webkriti.png");
  }
 
  .card3 {
-     background-image: url("../images/pawan.jpg");
+     background-image: url("../images/events/humblefool.png");
 
  }
 
  .card4 {
-     background-image: url("../images/varun.jpg");
+     background-image: url("../images/events/mad.jpg");
 
  }
+ .card5 {
+    background-image: url("../images/events/googler.png");
+
+} 
+.card6 {
+    background-image: url("../images/events/codequeen.png");
+
+}
+.card7 {
+    background-image: url("../images/events/githero.png");
+
+}
+.card8 {
+    background-image: url("../images/events/codered.png");
+
+}
+.card9{
+    background-image: url("../images/events/topbot.png");
+
+}
+.card10 {
+    background-image: url("../images/events/electrobuzz.png");
+
+}
+
+
 
  .fanctName {
      text-shadow: 3px 3px #c400ff;
@@ -1298,11 +1324,11 @@
      }
 
      .overlay-content {
-         width: 28vmin;
+         width: 36vmin;
      }
 
      .image-content {
-         width: 50vmin;
+         width: 37vmin;
      }
  }
 
