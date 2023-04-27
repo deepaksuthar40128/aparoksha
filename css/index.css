@@ -1088,28 +1088,7 @@
      overflow-y: scroll;
  }
 
- /*.wrap:hover .overlay {
-     transform: translateX(-60vmin);
- }
 
- .wrap:hover .image-content {
-     width: 30vmin;
- }
-
- .wrap:hover .overlay-content {
-     border: none;
-     transition-delay: .2s;
-     transform: translateX(60vmin);
- }
-
- .wrap:hover .dots {
-     transform: translateX(1rem);
- }
-
- .wrap:hover .dots .dot {
-     background: white;
- }
-*/
 
  /* Animations and timing delays */
  .animate {
