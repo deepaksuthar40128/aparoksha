@@ -1088,7 +1088,7 @@
      overflow-y: scroll;
  }
 
- .wrap:hover .overlay {
+ /*.wrap:hover .overlay {
      transform: translateX(-60vmin);
  }
 
@@ -1109,7 +1109,7 @@
  .wrap:hover .dots .dot {
      background: white;
  }
-
+*/
 
  /* Animations and timing delays */
  .animate {
